@@ -1,0 +1,14 @@
+[ui]
+editor = emacs
+username = Sebastien Le Callonnec <sebastien@weblogism.com>
+ssh = ssh -C
+merge = kdiff3
+
+[extdiff]
+cmd.meld = meld
+opts.meld = 
+
+
+[tortoisehg]
+vdiff = meld
+spellcheck = <unspecified>m
