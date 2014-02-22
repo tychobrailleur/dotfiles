@@ -1,0 +1,2 @@
+#echo $@ | awk -F" " '{ for (i=1;i<=NF;i++) print $i }' | sort -nr | awk '{print $0 ," "}'
+echo $@ | awk 'BEGIN { RS=" " } {print $0}' | sort -nr
