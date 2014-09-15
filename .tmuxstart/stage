@@ -1,0 +1,10 @@
+new_session -n stage
+split 0 -h
+split 0 -h
+tmux select-layout even-horizontal
+send_keys 0.0 "ssh jcl2atl0040" "Enter"
+send_keys 0.0 "sesudo mc" "Enter"
+send_keys 0.1 "ssh jcl2atl0067" "Enter"
+send_keys 0.1 "sesudo mc" "Enter"
+send_keys 0.2 "ssh jcl2atl0068" "Enter"
+send_keys 0.2 "sesudo mc" "Enter"

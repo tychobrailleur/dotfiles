@@ -1,0 +1,1 @@
+complete -W "$(grep HostName ~/.ssh/config | awk '{print $2}' | grep -v github)" ssh

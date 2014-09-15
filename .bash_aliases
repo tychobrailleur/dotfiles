@@ -8,13 +8,37 @@ alias ..4="cd ../../../.."
 alias ..5="cd ../../../../.."
 alias c="clear"
 alias r="reset"
+alias f="cd ~/dev/fuelable"
+alias g="grails"
+alias h="cd"
 alias apt-get="sudo apt-get"
-alias unit="grails run-test unit:"
 alias serve="python -m SimpleHTTPServer"
+alias rgrep="grep -HnR"
 
-if [ -x /usr/bin/dircolors ]; then
-  alias ls='ls --color=auto'
-  alias grep='grep --color=auto'
-  alias fgrep='fgrep --color=auto'
-  alias egrep='egrep --color=auto'
-fi
+alias emacs='emacs -nw'
+alias ls='ls -G'
+alias grep='grep --color'
+alias fgrep='fgrep --color'
+alias egrep='egrep --color'
+
+# Grails aliases
+# alias grails="grails -echoOut -plain-output"
+alias grails-run="grails run-app"
+alias grails-test="grails test-app"
+alias grails-clean="grails clean"
+alias unit="grails run-test unit:"
+
+# Functions
+function clean_grails() {
+  rm -rf ~/.grails/.slcache
+}
+
+function bak() {
+  mv -v $1{,.bak}
+}
+
+function unbak() {
+  x=$1
+  y=${x%.bak}
+  mv -v $x $y
+}
