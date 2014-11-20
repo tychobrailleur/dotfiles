@@ -4,17 +4,19 @@
     autosetuprebase = always
 [core]
     editor = emacs
-
 [alias]
     ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
     ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
     lasttag = describe --tags --abbrev=0
     lt = describe --tags --abbrev=0
     st = status
+    s = status --porcelain
+    restore-file = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\"}; f"
     ci = commit
     co = checkout
     br = branch
     d = diff
+    dc = diff --cached
     info = remote show origin
     undo = reset HEAD^ --soft
     unstage = reset HEAD --
