@@ -1,23 +1,15 @@
-[user]
-	email = sebastien@weblogism.com
-	name = Sébastien Le Callonnec
+[include]
+    path = .gitconfig.user
 [branch]
-	autosetuprebase = always
-[giggle]
-	main-window-maximized = true
-	main-window-geometry = 0x0+0+0
-	history-view-vpane-position = 418
-	main-window-view = HistoryView
-	file-view-vpane-position = 731
+    autosetuprebase = always
 [core]
-	editor = emacs
+    editor = emacs
 
 [alias]
-	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
-	lasttag = describe --tags --abbrev=0
-	lt = describe --tags --abbrev=0
-	restore-file = !git checkout $(git rev-list -n 1 HEAD -- "$1")^ -- "$1"
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    lasttag = describe --tags --abbrev=0
+    lt = describe --tags --abbrev=0
     st = status
     ci = commit
     co = checkout
@@ -26,4 +18,6 @@
     last = log -1 HEAD
     rms = "!f(){ git rm --cached \"$1\";rm -r \"$1\";git config -f .gitmodules --remove-section \"submodule.$1\";git config -f .git/config --remove-section \"submodule.$1\";git add .gitmodules; }; f"
 [merge]
-	tool = kdiff3
+    tool = kdiff3
+[log]
+    decorate = true
