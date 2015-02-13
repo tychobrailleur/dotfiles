@@ -1,0 +1,5 @@
+\set ON_ERROR_ROLLBACK interactive
+\set HISTFILE ~/.psql/history- :DBNAME
+
+\timing
+\x auto
