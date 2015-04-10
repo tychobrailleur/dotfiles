@@ -1,3 +1,6 @@
 [submodule "emacs"]
 	path = emacs
 	url = https://bitbucket.org/tychobrailleur/emacs.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree

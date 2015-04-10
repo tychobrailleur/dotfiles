@@ -42,4 +42,5 @@ autocmd BufNewFile	*.spec	call SKEL_spec()
 filetype plugin on
 filetype indent on
 execute pathogen#infect()
+map <C-n> :NERDTreeToggle<CR>
 " ~/.vimrc ends here
