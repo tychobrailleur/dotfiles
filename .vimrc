@@ -1,7 +1,11 @@
+set encoding=utf-8
+set t_Co=256
 set hlsearch
 set number
 set cul
 set visualbell
+set ruler
+set hidden
 set showmode
 syntax on
 " ~/.vimrc (configuration file for vim only)
@@ -43,4 +47,5 @@ filetype plugin on
 filetype indent on
 execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
+let g:Powerline_symbols = "fancy"
 " ~/.vimrc ends here

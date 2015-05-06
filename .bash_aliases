@@ -22,6 +22,7 @@ alias ls='ls -G'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias egrep='egrep --color'
+alias fuck='$(thefuck $(fc -ln -1))'
 
 # Grails aliases
 # alias grails="grails -echoOut -plain-output"
@@ -29,6 +30,7 @@ alias grails-run="grails run-app"
 alias grails-test="grails test-app"
 alias grails-clean="grails clean"
 alias unit="grails run-test unit:"
+alias grails-run-no-seed="grails -reloading --refresh-dependencies run-app -Dsimplify.dev.no.seeding=true"
 
 # Functions
 function clean_grails() {
