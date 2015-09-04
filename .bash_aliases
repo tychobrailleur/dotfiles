@@ -16,8 +16,7 @@ alias serve="python -m SimpleHTTPServer"
 alias rgrep="grep -HnR"
 
 alias ec="emacsclient"
-alias emacs='open -a /Applications/Emacs.app $1'
-alias emacs='emacs -nw'
+# alias emacs='open -a /Applications/Emacs.app $1'
 alias ls='ls -G'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
