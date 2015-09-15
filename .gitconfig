@@ -26,3 +26,6 @@
     tool = kdiff3
 [log]
     decorate = true
+[user]
+	email = sebastien@weblogism.com
+	name = Sébastien Le Callonnec
