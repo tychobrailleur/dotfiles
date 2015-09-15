@@ -1,5 +1,5 @@
 source ~/.git-prompt.sh
-PS1='\h:\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \$ '
+PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \e[1;33m☀\e[0m '
 PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
 
 [[ -s  ~/.bash_completion ]] && source ~/.bash_completion
