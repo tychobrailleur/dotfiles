@@ -29,7 +29,6 @@ alias grails-run="grails run-app"
 alias grails-test="grails test-app"
 alias grails-clean="grails clean"
 alias unit="grails run-test unit:"
-alias grails-run-no-seed="grails -reloading --refresh-dependencies run-app -Dsimplify.dev.no.seeding=true"
 
 # Functions
 function clean_grails() {
