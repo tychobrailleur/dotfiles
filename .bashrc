@@ -11,7 +11,7 @@ PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
 [[ -f ~/.git-completion.bash ]] && source ~/.git-completion.bash
 
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+source ${NVM_DIR}/nvm.sh
 
 export PS1
 export PATH=~/bin:${PATH}
