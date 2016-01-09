@@ -24,3 +24,6 @@ export JVM_OPTS="-Dclover.license=~/dev/clover.license"
 export PSQL_EDITOR="emacs -nw -Q"
 
 export PATH="$HOME/.rvm/bin:$PATH"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
