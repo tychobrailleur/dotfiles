@@ -29,3 +29,9 @@
 [user]
 	email = sebastien@weblogism.com
 	name = Sébastien Le Callonnec
+[transfer]
+    fsckObjects = true
+[fetch]
+    fsckObjects = true
+[receive]
+    fsckObjects = true
