@@ -1,2 +1,5 @@
 PATH=/usr/local/Cellar/ctags/5.8_1/bin/:${PATH}
 export PATH
+
+
+alias emacs='open -a /Applications/Emacs.app $1'
