@@ -1,10 +1,12 @@
 source ~/.git-prompt.sh
-# Sun is cute, bt causing problems on Iterm2
-# PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \e[1;33m☀\e[0m '
-PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \e[1;33m★\e[0m '
-PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
-PLATFORM=`uname`
 
+# If problem with term display because of unicode char,
+# try setting TERM=term, rather than xterm-256color.
+separator="★"
+PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \e[1;33m${separator}\e[0m '
+PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
+
+PLATFORM=`uname`
 
 [[ -s  ~/.bash_completion ]] && source ~/.bash_completion
 [[ -s  ~/.bash_aliases ]] && source ~/.bash_aliases
