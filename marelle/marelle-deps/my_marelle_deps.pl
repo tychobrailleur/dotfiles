@@ -2,35 +2,44 @@
 % my-local-deps.pl
 % marelle-deps
 %
+% To use:
+%  install Marelle;
+%    brew install swi-prolog
+%    git clone https://github.com/larsyencken/marelle ~/.local/marelle
+%  run marelle meet my-local-deps under dotfiles/marelle
 
 meta_pkg('my-local-deps', [
              '__dev folder',
              cntlm,
+             wget,
              tmux,
              git,
              tig,
              emacs,
+             vim,
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
              rvm,
              '__rvm prompt setup',
-             '__git prompt'
+             '__git prompt',
              '__git completion'
 ]).
 
 
 % All my dev stuff goes into ~/dev/. Always.  Everywhere.
 pkg('__dev folder').
-met('__dev_folder', _) :-
+met('__dev folder', _) :-
     isdir('~/dev').
 meet('__dev folder', _) :-
     bash('mkdir ~/dev').
 
+managed_pkg(wget).
 managed_pkg(tmux).
 managed_pkg(cntlm).
 managed_pkg(git).
 managed_pkg(tig).
+managed_pkg(vim).
 
 git_step(
     '__dotemacs checked out',
