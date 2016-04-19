@@ -1,3 +1,4 @@
+% -*- mode: prolog -*-
 %
 % my-local-deps.pl
 % marelle-deps
@@ -15,6 +16,7 @@ meta_pkg('my-local-deps', [
              tmux,
              git,
              tig,
+             monit,
              emacs,
              vim,
              '__dotemacs checked out',
@@ -39,6 +41,7 @@ managed_pkg(tmux).
 managed_pkg(cntlm).
 managed_pkg(git).
 managed_pkg(tig).
+managed_pkg(monit).
 managed_pkg(vim).
 
 git_step(
