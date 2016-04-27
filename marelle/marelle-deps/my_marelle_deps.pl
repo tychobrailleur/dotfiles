@@ -19,6 +19,7 @@ meta_pkg('my-local-deps', [
              monit,
              emacs,
              vim,
+	         offlineimap,
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
@@ -29,7 +30,7 @@ meta_pkg('my-local-deps', [
 ]).
 
 
-% All my dev stuff goes into ~/dev/. Always.  Everywhere.
+% All my dev stuff goes into ~/dev/.  Always.  Everywhere.
 pkg('__dev folder').
 met('__dev folder', _) :-
     isdir('~/dev').
@@ -43,6 +44,7 @@ managed_pkg(git).
 managed_pkg(tig).
 managed_pkg(monit).
 managed_pkg(vim).
+managed_pkg(offlineimap).
 
 git_step(
     '__dotemacs checked out',
@@ -85,6 +87,4 @@ meet('__git completion', _) :-
     bash('curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash'),
     bash('echo \'if [ -f ~/.git-completion.bash ]; then\n        . ~/.git-completion.bash\n    fi\' >> ~/.bashrc').
 
-% Local Variables:
-% mode: prolog
-% End:t
+% end of my_marelle_deps.pl
