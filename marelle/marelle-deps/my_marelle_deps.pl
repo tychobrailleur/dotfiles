@@ -20,6 +20,7 @@ meta_pkg('my-local-deps', [
              emacs,
              vim,
 	         offlineimap,
+             gitflow,
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
@@ -45,6 +46,7 @@ managed_pkg(tig).
 managed_pkg(monit).
 managed_pkg(vim).
 managed_pkg(offlineimap).
+managed_pkg(gitflow).
 
 git_step(
     '__dotemacs checked out',
