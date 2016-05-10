@@ -17,10 +17,11 @@ meta_pkg('my-local-deps', [
              git,
              tig,
              monit,
+             'ssh-copy-id',
              emacs,
              vim,
 	         offlineimap,
-             gitflow,
+             'git-flow',
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
@@ -44,9 +45,11 @@ managed_pkg(cntlm).
 managed_pkg(git).
 managed_pkg(tig).
 managed_pkg(monit).
+% Should probably be done on OSX only.
+managed_pkg('ssh-copy-id').
 managed_pkg(vim).
 managed_pkg(offlineimap).
-managed_pkg(gitflow).
+managed_pkg('gitflow').
 
 git_step(
     '__dotemacs checked out',
