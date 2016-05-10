@@ -25,6 +25,7 @@ meta_pkg('my-local-deps', [
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
+             mitmproxy,
              rvm,
              '__rvm prompt setup',
              '__git prompt',
@@ -49,7 +50,8 @@ managed_pkg(monit).
 managed_pkg('ssh-copy-id').
 managed_pkg(vim).
 managed_pkg(offlineimap).
-managed_pkg('gitflow').
+managed_pkg('git-flow').
+managed_pkg(mitmproxy).
 
 git_step(
     '__dotemacs checked out',
