@@ -20,11 +20,14 @@ meta_pkg('my-local-deps', [
              'ssh-copy-id',
              emacs,
              vim,
+             mu,
 	         offlineimap,
+             ag,
              'git-flow',
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
+             erlang,
              mitmproxy,
              rvm,
              '__rvm prompt setup',
@@ -49,9 +52,12 @@ managed_pkg(monit).
 % Should probably be done on OSX only.
 managed_pkg('ssh-copy-id').
 managed_pkg(vim).
+managed_pkg(mu).
 managed_pkg(offlineimap).
+managed_pkg(ag).
 managed_pkg('git-flow').
 managed_pkg(mitmproxy).
+managed_pkg(erlang).
 
 git_step(
     '__dotemacs checked out',
