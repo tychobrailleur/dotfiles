@@ -13,6 +13,7 @@ alias h="cd"
 alias apt-get="sudo apt-get"
 alias serve="python -m SimpleHTTPServer"
 alias rgrep="grep -HnR"
+alias mkdp='mkdir -p'
 
 alias ec="emacsclient -n"
 alias ls='ls -G'
@@ -28,11 +29,6 @@ alias grails-test="grails test-app"
 alias grails-clean="grails clean"
 alias unit="grails run-test unit:"
 
-# Functions
-function clean_grails() {
-  rm -rf ~/.grails/.slcache
-}
-
 function bak() {
   mv -v $1{,.bak}
 }
@@ -42,3 +38,6 @@ function unbak() {
   y=${x%.bak}
   mv -v $x $y
 }
+
+eval "$(hub alias -s)"
+
