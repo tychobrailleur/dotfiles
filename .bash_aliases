@@ -15,6 +15,9 @@ alias serve="python -m SimpleHTTPServer"
 alias rgrep="grep -HnR"
 alias mkdp='mkdir -p'
 
+alias +='pushd .'
+alias _='popd'
+
 alias ec="emacsclient -n"
 alias ls='ls -G'
 alias grep='grep --color'
