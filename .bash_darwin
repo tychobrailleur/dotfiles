@@ -1,4 +1,5 @@
 PATH=/usr/local/Cellar/ctags/5.8_1/bin/:${PATH}
+PATH=/Library/TeX/texbin:${PATH}
 export PATH
 
 
