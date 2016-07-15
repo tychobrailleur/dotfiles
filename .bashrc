@@ -24,6 +24,7 @@ export PS1
 export PATH=~/bin:${PATH}
 export JVM_OPTS="-Dclover.license=~/dev/clover.license"
 export PSQL_EDITOR="emacs -nw -Q"
+export MANPAGER="col -b | vim -c 'set ft=man ts=8 nomod nolist nonu' -c 'nnoremap i <nop>' -"
 
 export PATH="$HOME/.rvm/bin:$PATH"
 
