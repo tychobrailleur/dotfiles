@@ -18,6 +18,8 @@ meta_pkg('my-local-deps', [
              tig,
              monit,
              'ssh-copy-id',
+             gnutls,
+             gnupg,
              emacs,
              vim,
              mu,
@@ -49,6 +51,8 @@ managed_pkg(cntlm).
 managed_pkg(git).
 managed_pkg(tig).
 managed_pkg(monit).
+managed_pkg(gnutls).
+managed_pkg(gnupg).
 % Should probably be done on OSX only.
 managed_pkg('ssh-copy-id').
 managed_pkg(vim).
