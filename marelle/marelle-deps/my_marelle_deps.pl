@@ -24,12 +24,13 @@ meta_pkg('my-local-deps', [
              vim,
              mu,
 	         offlineimap,
-             ag,
+%             ag,
              'git-flow',
              '__dotemacs checked out',
              '__dotemacs symlinked',
              ctags,
              erlang,
+             httpie,
              mitmproxy,
              rvm,
              '__rvm prompt setup',
@@ -62,6 +63,7 @@ managed_pkg(ag).
 managed_pkg('git-flow').
 managed_pkg(mitmproxy).
 managed_pkg(erlang).
+managed_pkg(httpie).
 
 git_step(
     '__dotemacs checked out',
