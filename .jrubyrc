@@ -1,3 +1,3 @@
 compat.version = 2.0
 compile.mode = OFF
-#compile.invokedynamic = true
+compile.invokedynamic = true
