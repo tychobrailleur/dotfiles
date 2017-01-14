@@ -24,7 +24,7 @@ meta_pkg('my-local-deps', [
              vim,
              mu,
 	         offlineimap,
-%             ag,
+             ag,
              'git-flow',
              '__dotemacs checked out',
              '__dotemacs symlinked',
@@ -32,6 +32,7 @@ meta_pkg('my-local-deps', [
              erlang,
              httpie,
              mitmproxy,
+             graphviz,
              rvm,
              '__rvm prompt setup',
              '__git prompt',
@@ -59,11 +60,14 @@ managed_pkg('ssh-copy-id').
 managed_pkg(vim).
 managed_pkg(mu).
 managed_pkg(offlineimap).
-managed_pkg(ag).
 managed_pkg('git-flow').
 managed_pkg(mitmproxy).
 managed_pkg(erlang).
 managed_pkg(httpie).
+managed_pkg(graphviz).
+
+command_pkg(ag).
+installs_with_brew(ag, 'the_silver_searcher').
 
 git_step(
     '__dotemacs checked out',
