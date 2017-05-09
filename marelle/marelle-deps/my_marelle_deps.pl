@@ -34,6 +34,7 @@ meta_pkg('my-local-deps', [
              mitmproxy,
              graphviz,
              rvm,
+             pstree,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
@@ -64,6 +65,7 @@ managed_pkg('git-flow').
 managed_pkg(mitmproxy).
 managed_pkg(erlang).
 managed_pkg(httpie).
+managed_pkg(pstree).
 managed_pkg(graphviz).
 
 command_pkg(ag).

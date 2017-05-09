@@ -27,10 +27,12 @@ alias fuck='$(thefuck $(fc -ln -1))'
 
 # Grails aliases
 # alias grails="grails -echoOut -plain-output"
-alias grails-run="grails run-app"
+alias grails-run="grails run-app -echoOut -plain-output"
 alias grails-test="grails test-app"
 alias grails-clean="grails clean"
 alias unit="grails run-test unit:"
+
+alias git-up-all="for i in `ls`; do echo $i; cd ~/dev/$i && git-up; done"
 
 function bak() {
   mv -v $1{,.bak}
@@ -43,4 +45,3 @@ function unbak() {
 }
 
 eval "$(hub alias -s)"
-
