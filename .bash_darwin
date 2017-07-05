@@ -8,3 +8,8 @@ export PATH
 
 
 alias emacs='open -a /Applications/Emacs.app $1'
+
+# Use to update iterm tab title
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
