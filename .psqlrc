@@ -2,4 +2,4 @@
 \set HISTFILE ~/.psql/history- :DBNAME
 
 \timing
-\x auto
+\x off
