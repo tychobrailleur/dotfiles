@@ -36,6 +36,7 @@ export JVM_OPTS="-Dclover.license=~/dev/clover.license"
 export PSQL_EDITOR="emacs -nw -Q"
 # export MANPAGER="/bin/sh -c \"col -b | vim -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
 export MANPAGER="less"
+export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
 export PATH="$HOME/.rvm/bin:$PATH"
 
