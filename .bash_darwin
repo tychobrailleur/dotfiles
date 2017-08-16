@@ -1,10 +1,11 @@
 PATH=/usr/local/Cellar/ctags/5.8_1/bin/:${PATH}
 PATH=/Library/TeX/texbin:${PATH}
+PATH="/Applications/Racket v6.9/bin:${PATH}"
 PATH=/Users/sebastienlecallonnec/dev/apache-maven-3.4.0-SNAPSHOT/bin:${PATH}
-PATH="/usr/local/opt/texinfo/bin:$PATH"
+PATH="/usr/local/opt/texinfo/bin:${PATH}"
 
 # Use GNU sed.
-PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+PATH=/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}
 export PATH
 
 
