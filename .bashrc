@@ -28,7 +28,6 @@ export NVM_DIR=~/.nvm
 source ${NVM_DIR}/nvm.sh
 
 export RVM_DIR=~/.rvm
-source ${RVM_DIR}/scripts/rvm
 
 export PS1
 export PATH=~/bin:${PATH}
@@ -38,7 +37,8 @@ export PSQL_EDITOR="emacs -nw -Q"
 export MANPAGER="less"
 export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M"
 
-export PATH="$HOME/.rvm/bin:$PATH"
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
