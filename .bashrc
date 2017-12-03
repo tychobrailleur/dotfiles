@@ -1,5 +1,6 @@
 source /usr/local/etc/bash_completion.d/git-completion.bash
 source /usr/local/etc/bash_completion.d/git-prompt.sh
+source /usr/local/etc/bash_completion.d/mvn-completion.bash
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # If problem with term display because of unicode char,
