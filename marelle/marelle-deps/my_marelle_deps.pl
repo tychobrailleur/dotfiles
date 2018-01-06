@@ -34,7 +34,9 @@ meta_pkg('my-local-deps', [
              mitmproxy,
              graphviz,
              rvm,
-             pstree,
+                           pstree,
+                           makeinfo,
+                           pwgen,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
@@ -67,6 +69,8 @@ managed_pkg(erlang).
 managed_pkg(httpie).
 managed_pkg(pstree).
 managed_pkg(graphviz).
+managed_pkg(makeinfo).
+managed_pkg(pwgen).
 
 command_pkg(ag).
 installs_with_brew(ag, 'the_silver_searcher').
