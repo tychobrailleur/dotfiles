@@ -1,0 +1,8 @@
+#!/bin/sh
+
+if [ "$1" == "" ]; then
+   echo "Usage: get-cert <host:port>"
+   exit 1
+fi
+
+echo -n | openssl s_client -connect $1 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' 2>/dev/null
