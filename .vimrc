@@ -7,6 +7,8 @@ set visualbell
 set ruler
 set hidden
 set showmode
+" Reduce update time for gitgutter.
+set updatetime=100
 syntax on
 " ~/.vimrc (configuration file for vim only)
 " skeletons
