@@ -2,8 +2,8 @@
 export BASH_CONF="bash_profile"
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
-export PATH=/usr/local/bin:$PATH
-export PATH="/usr/local/sbin:$PATH"
+# export PATH=/usr/local/bin:$PATH
+# export PATH="/usr/local/sbin:$PATH"
 export PATH="$PATH:/usr/local/lib/node_modules/karma/bin"
 
 

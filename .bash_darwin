@@ -3,6 +3,7 @@ PATH=/Library/TeX/texbin:${PATH}
 PATH="/Applications/Racket v6.9/bin:${PATH}"
 PATH=/Users/sebastienlecallonnec/dev/apache-maven-3.5.2/bin:${PATH}
 PATH="/usr/local/opt/texinfo/bin:${PATH}"
+PATH="/Users/sebastienlecallonnec/.cargo/bin:${PATH}"
 
 # Use GNU sed.
 PATH=/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}
@@ -15,3 +16,7 @@ alias emacs='open -a /Applications/Emacs.app $1'
 function title {
     echo -ne "\033]0;"$*"\007"
 }
+
+if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
+  . $(brew --prefix)/etc/bash_completion.d/um-completion.sh
+fi
