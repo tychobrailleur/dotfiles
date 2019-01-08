@@ -2,6 +2,7 @@ PATH=/usr/local/Cellar/ctags/5.8_1/bin/:${PATH}
 PATH=/Library/TeX/texbin:${PATH}
 PATH="/Applications/Racket v6.9/bin:${PATH}"
 PATH="/usr/local/opt/texinfo/bin:${PATH}"
+PATH="/usr/local/texlive/2018/bin/x86_64-darwin:${PATH}"
 PATH="/Users/sebastienlecallonnec/.cargo/bin:${PATH}"
 
 # Use GNU sed.
