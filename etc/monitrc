@@ -1,0 +1,6 @@
+set daemon  120           # check services at 2-minute intervals
+    with start delay 240  # optional: delay the first check by 4-minutes
+
+set logfile syslog facility log_daemon 
+
+
