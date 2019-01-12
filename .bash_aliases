@@ -1,3 +1,4 @@
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias tptem='totem'
 alias na='nautilus'
@@ -19,7 +20,6 @@ alias +='pushd .'
 alias _='popd'
 
 alias ec="emacsclient -n"
-alias ls='ls -G'
 alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias egrep='egrep --color'

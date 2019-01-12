@@ -14,6 +14,7 @@ PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e
 # Change colour of directories, blue is too dark
 LS_COLORS=$LS_COLORS:'di=0;35:'
 export LS_COLORS
+export LS_OPTIONS='--color=auto'
 
 PLATFORM=`uname`
 
