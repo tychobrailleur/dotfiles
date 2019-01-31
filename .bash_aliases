@@ -14,7 +14,7 @@ alias h="cd"
 alias apt-get="sudo apt-get"
 alias serve="python -m SimpleHTTPServer"
 alias rgrep="grep -HnR"
-alias mkdp='mkdir -p'
+alias mkdir='mkdir -p'
 
 alias +='pushd .'
 alias _='popd'
