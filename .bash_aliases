@@ -44,4 +44,4 @@ function unbak() {
   mv -v $x $y
 }
 
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"

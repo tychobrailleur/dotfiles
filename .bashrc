@@ -8,6 +8,8 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # try setting TERM=term, rather than xterm-256color.
 separator="💛💚"
 #separator="$"
+# 🔰‏
+
 PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e[0m\] '
 #PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
 
@@ -49,3 +51,4 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
