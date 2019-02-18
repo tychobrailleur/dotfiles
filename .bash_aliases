@@ -1,5 +1,5 @@
 alias ls='ls --color=auto'
-alias ll='ls -l'
+alias ll='ls -alrh'
 alias tptem='totem'
 alias na='nautilus'
 alias ..="cd .."
