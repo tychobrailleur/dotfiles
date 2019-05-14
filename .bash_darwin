@@ -17,6 +17,13 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
+function full_brew_update() {
+    brew update
+    brew cask upgrade
+    brew upgrade
+    brew cleanup
+}
+
 if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
   . $(brew --prefix)/etc/bash_completion.d/um-completion.sh
 fi
