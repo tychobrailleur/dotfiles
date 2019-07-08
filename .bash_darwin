@@ -9,8 +9,8 @@ PATH="/Users/sebastienlecallonnec/.cargo/bin:${PATH}"
 PATH=/usr/local/opt/gnu-sed/libexec/gnubin:${PATH}
 export PATH
 
-
 alias emacs='open -a /Applications/Emacs.app $1'
+alias ls='ls -G'
 
 # Use to update iterm tab title
 function title {
