@@ -27,3 +27,6 @@ function full_brew_update() {
 if [ -f $(brew --prefix)/etc/bash_completion.d/um-completion.sh ]; then
   . $(brew --prefix)/etc/bash_completion.d/um-completion.sh
 fi
+
+export PKG_CONFIG_PATH="/usr/local/opt/libffi/lib/pkgconfig:${PKG_CONFIG_PATH}"
+export LDFLAGS="-L/usr/local/opt/libffi/lib:${LDFLAGS}"
