@@ -37,6 +37,8 @@ meta_pkg('my-local-deps', [
                            pstree,
                            makeinfo,
                            pwgen,
+                           pandoc,
+                           watch,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
@@ -71,6 +73,8 @@ managed_pkg(pstree).
 managed_pkg(graphviz).
 managed_pkg(makeinfo).
 managed_pkg(pwgen).
+managed_pkg(pandoc).
+managed_pkg(watch).
 
 command_pkg(ag).
 installs_with_brew(ag, 'the_silver_searcher').
