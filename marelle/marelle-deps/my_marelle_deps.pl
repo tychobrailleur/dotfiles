@@ -34,15 +34,15 @@ meta_pkg('my-local-deps', [
              mitmproxy,
              graphviz,
              rvm,
-                           pstree,
-                           makeinfo,
-                           pwgen,
-                           pandoc,
-                           watch,
+             pstree,
+             makeinfo,
+             pwgen,
+             pandoc,
+             watch,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
-]).
+         ]).
 
 
 % All my dev stuff goes into ~/dev/.  Always.  Everywhere.
