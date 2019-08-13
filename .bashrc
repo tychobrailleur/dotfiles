@@ -32,9 +32,6 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
     [[ -s ~/.bash_darwin ]]  && source ~/.bash_darwin
 fi
 
-export NVM_DIR=~/.nvm
-source ${NVM_DIR}/nvm.sh
-
 export RVM_DIR=~/.rvm
 
 export PS1
@@ -53,4 +50,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
