@@ -7,11 +7,12 @@
 %  install Marelle;
 %    brew install swi-prolog
 %    git clone https://github.com/larsyencken/marelle ~/.local/marelle
-%  run marelle meet my-local-deps under dotfiles/marelle
+%  run `marelle meet my-local-deps` under dotfiles/marelle
 
 meta_pkg('my-local-deps', [
              '__dev folder',
              cntlm,
+             tree,
              wget,
              tmux,
              git,
@@ -22,7 +23,7 @@ meta_pkg('my-local-deps', [
              gnupg,
              emacs,
              vim,
-             mu,
+             %             mu,   %% The preferred way is to compile locally rather than use pkg management
 	         offlineimap,
              ag,
              'git-flow',
@@ -35,7 +36,7 @@ meta_pkg('my-local-deps', [
              graphviz,
              rvm,
              pstree,
-             makeinfo,
+             texinfo,
              pwgen,
              pandoc,
              watch,
@@ -55,6 +56,7 @@ meet('__dev folder', _) :-
 managed_pkg(wget).
 managed_pkg(tmux).
 managed_pkg(cntlm).
+managed_pkg(tree).
 managed_pkg(git).
 managed_pkg(tig).
 managed_pkg(monit).
@@ -71,7 +73,7 @@ managed_pkg(erlang).
 managed_pkg(httpie).
 managed_pkg(pstree).
 managed_pkg(graphviz).
-managed_pkg(makeinfo).
+managed_pkg(texinfo).
 managed_pkg(pwgen).
 managed_pkg(pandoc).
 managed_pkg(watch).
