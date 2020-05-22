@@ -40,6 +40,7 @@ meta_pkg('my-local-deps', [
              pwgen,
              pandoc,
              watch,
+             fzf,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
@@ -77,6 +78,7 @@ managed_pkg(texinfo).
 managed_pkg(pwgen).
 managed_pkg(pandoc).
 managed_pkg(watch).
+managed_pkg(fzf).
 
 command_pkg(ag).
 installs_with_brew(ag, 'the_silver_searcher').
