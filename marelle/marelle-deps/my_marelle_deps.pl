@@ -18,10 +18,8 @@ meta_pkg('my-local-deps', [
              git,
              tig,
              monit,
-             'ssh-copy-id',
              gnutls,
              gnupg,
-             emacs,
              vim,
              %             mu,   %% The preferred way is to compile locally rather than use pkg management
 	         offlineimap,
@@ -41,6 +39,7 @@ meta_pkg('my-local-deps', [
              pandoc,
              watch,
              fzf,
+             ripgrep,
              '__rvm prompt setup',
              '__git prompt',
              '__git completion'
@@ -61,10 +60,7 @@ managed_pkg(tree).
 managed_pkg(git).
 managed_pkg(tig).
 managed_pkg(monit).
-managed_pkg(gnutls).
 managed_pkg(gnupg).
-% Should probably be done on OSX only.
-managed_pkg('ssh-copy-id').
 managed_pkg(vim).
 managed_pkg(mu).
 managed_pkg(offlineimap).
@@ -72,16 +68,16 @@ managed_pkg('git-flow').
 managed_pkg(mitmproxy).
 managed_pkg(erlang).
 managed_pkg(httpie).
-managed_pkg(pstree).
 managed_pkg(graphviz).
 managed_pkg(texinfo).
 managed_pkg(pwgen).
 managed_pkg(pandoc).
-managed_pkg(watch).
 managed_pkg(fzf).
+managed_pkg(ripgrep).
 
 command_pkg(ag).
 installs_with_brew(ag, 'the_silver_searcher').
+installs_withapt(ag, 'silversearcher-ag').
 
 git_step(
     '__dotemacs checked out',
@@ -98,6 +94,17 @@ symlink_step(
 command_pkg(ctags).
 installs_with_apt(ctags, 'exuberant-ctags').
 installs_with_brew(ctags, 'exuberant-ctags').
+
+command_pkg(pstree).
+installs_with_apt(pstree, 'psmisc').
+installs_with_brew(pstree, 'pstree').
+
+command_pkg(gnutls).
+installs_with_apt(gnutls, 'gnutls-bin').
+
+command_pkg(watch).
+installs_with_apt(watch, 'procps').
+
 
 pkg(rvm).
 met(rvm, _) :- isfile('~/.rvm/bin/rvm').
