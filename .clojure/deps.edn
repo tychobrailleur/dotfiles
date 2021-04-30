@@ -11,5 +11,40 @@
 
 {
  :aliases {:rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-                   :main-opts  ["-m" "rebel-readline.main"]}}
+                   :main-opts  ["-m" "rebel-readline.main"]}
+           :reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.2.180"}}
+                    :ns-default vlaaad.reveal
+                    :exec-fn repl}
+
+           ;; clojure -M:repl/rebel-nrepl
+           :repl/rebel-nrepl
+           {:extra-deps {nrepl/nrepl                {:mvn/version "0.8.3"}
+                         cider/cider-nrepl          {:mvn/version "0.25.5"}
+                         com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+            :main-opts  ["-m" "nrepl.cmdline"
+                         "--middleware" "[cider.nrepl/cider-middleware]"
+                         "-i"
+                         "-f" "rebel-readline.main/-main"]}
+
+
+           ;; Run a Clojure repl with reveal and nrepl interactively
+           ;; - see :inspect/reveal* for more reveal aliases
+           ;; clj -M:repl/reveal-nrepl
+           :repl/reveal-nrepl
+           {:extra-deps {vlaaad/reveal {:mvn/version "1.2.180"}
+                         nrepl/nrepl   {:mvn/version "0.8.3"}}
+            :main-opts  ["-m" "nrepl.cmdline"
+                         "--middleware" "[vlaaad.reveal.nrepl/middleware]"
+                         "-i"]}
+
+           :inspect/reveal-nrepl-cider
+           {:extra-deps {vlaaad/reveal                 {:mvn/version "1.2.180"}
+                         nrepl/nrepl                   {:mvn/version "0.8.3"}
+                         cider/cider-nrepl             {:mvn/version "0.25.5"}
+                         refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}}
+            :main-opts  ["-m" "nrepl.cmdline"
+                         "--middleware" "[vlaaad.reveal.nrepl/middleware,refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"]}
+
+           }
+
  }

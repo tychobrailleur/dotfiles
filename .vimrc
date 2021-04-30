@@ -50,4 +50,7 @@ filetype indent on
 execute pathogen#infect()
 map <C-n> :NERDTreeToggle<CR>
 let g:Powerline_symbols = "fancy"
+let g:airline_theme='one'
+colorscheme one
+set background=dark " for the dark version
 " ~/.vimrc ends here

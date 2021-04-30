@@ -58,3 +58,26 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+source "$HOME/.cargo/env"
+
+xmodmap ~/.Xmodmap
+
+
+export BASH_IT="/home/sebastien/.bash_it"
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
+
+# Change this to your console based IRC client of choice.
+export IRC_CLIENT='erc'
+
+# Set this to the command you use for todo.txt-cli
+export TODO="t"
+
+# Set this to false to turn off version control status checking within the prompt for all themes
+export SCM_CHECK=true
+export BASH_IT_THEME="powerline"
+export POWERLINE_PROMPT="user_info scm node cwd"
+
+
+source "$BASH_IT"/bash_it.sh
