@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+
+EMACS_DIR=~/dev/emacs
+
+cd $EMACS_DIR
+
+./autogen.sh
+./configure --with-cairo \
+--with-modules \
+--without-compress-install \
+--with-x-toolkit=no \
+--with-gnutls \
+--with-mailutils \
+--with-native-compilation \
+--with-json \
+--with-harfbuzz \
+--with-imagemagick \
+--with-jpeg \
+--with-png \
+--with-rsvg \
+--with-tiff \
+--with-wide-int \
+--with-xft \
+--with-xml2 \
+--with-xpm \
+--with-modules \
+--with-threads \
+--with-native-image-api \
+--with-pdumper \
+CFLAGS="-O3 -mtune=native -march=native -fomit-frame-pointer" prefix=/usr/local
+make -j2 NATIVE_FULL_AOT=1
+sudo make install
