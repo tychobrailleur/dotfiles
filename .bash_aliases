@@ -34,7 +34,7 @@ alias unit="grails run-test unit:"
 alias git-up-all="for i in `ls`; do echo $i; cd ~/dev/$i && git-up; done"
 
 # Clojure aliases
-alias clojure="clojure -A:rebel" # Use rebel as the Clojure REPL
+#alias clojure="clojure -A:rebel" # Use rebel as the Clojure REPL
 
 function bak() {
   mv -v $1{,.bak}

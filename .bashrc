@@ -9,10 +9,11 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # try setting TERM=term, rather than xterm-256color.
 #separator="💛💚"
 #separator="$"
-separator="🔰‏"
+#separator="🔰‏"
 # 🔰‏
+#separator="🐉"
 
-PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e[0m\] '
+#PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e[0m\] '
 #PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
 
 # Change colour of directories, blue is too dark
@@ -31,6 +32,10 @@ PLATFORM=`uname`
 if [[ "$PLATFORM" == "Darwin" ]]; then
     [[ -s ~/.bash_darwin ]]  && source ~/.bash_darwin
 fi
+if [[ "$PLATFORM" == "Linux" ]]; then
+    [[ -s ~/.bash_linux ]]  && source ~/.bash_linux
+fi
+
 
 export RVM_DIR=~/.rvm
 
