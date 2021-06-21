@@ -65,10 +65,7 @@ fi
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 source "$HOME/.cargo/env"
 
-xmodmap ~/.Xmodmap
-
-
-export BASH_IT="/home/sebastien/.bash_it"
+export BASH_IT="${HOME}/.bash_it"
 
 # Don't check mail when opening terminal.
 unset MAILCHECK
