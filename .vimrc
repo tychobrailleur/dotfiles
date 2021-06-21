@@ -53,4 +53,6 @@ let g:Powerline_symbols = "fancy"
 let g:airline_theme='one'
 colorscheme one
 set background=dark " for the dark version
+packloadall
+silent! helptags ALL
 " ~/.vimrc ends here
