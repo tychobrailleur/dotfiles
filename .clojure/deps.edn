@@ -11,8 +11,9 @@
 
 {
  :aliases
- {:nREPL {:extra-deps
-          {nrepl/nrepl {:mvn/version "0.8.3"}}}}
- {:rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
-          :main-opts  ["-m" "rebel-readline.main"]}}
- }
+ {
+  :nREPL {:extra-deps {nrepl/nrepl {:mvn/version "0.8.3"}}}
+  :rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+          :main-opts  ["-m" "rebel-readline.main"]}
+  }
+}
