@@ -24,16 +24,18 @@ export EDITOR='emacs'
 
 PLATFORM=`uname`
 
-[[ -s  ~/.bash_completion ]] && source ~/.bash_completion
+source <(kubectl completion bash)
+
 [[ -s  ~/.bash_aliases ]] && source ~/.bash_aliases
+[[ -s  ~/.bash_completion ]] && source ~/.bash_completion
 [[ -s  ~/.bash_work ]] && source ~/.bash_work
 [[ -s  ~/.bash_local ]] && source ~/.bash_local
 [[ -f ~/.git-completion.bash ]] && source ~/.git-completion.bash
 if [[ "$PLATFORM" == "Darwin" ]]; then
-    [[ -s ~/.bash_darwin ]]  && source ~/.bash_darwin
+    [[ -s ~/.bash_darwin ]] && source ~/.bash_darwin
 fi
 if [[ "$PLATFORM" == "Linux" ]]; then
-    [[ -s ~/.bash_linux ]]  && source ~/.bash_linux
+    [[ -s ~/.bash_linux ]] && source ~/.bash_linux
 fi
 
 
