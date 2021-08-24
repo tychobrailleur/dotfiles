@@ -11,3 +11,7 @@ function _gulp_completions() {
 }
 
 complete -o default -F _gulp_completions gulp
+
+
+source <(kubectl completion bash)
+complete -F __start_kubectl kubectl

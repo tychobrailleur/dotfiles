@@ -79,7 +79,7 @@ export TODO="t"
 # Set this to false to turn off version control status checking within the prompt for all themes
 export SCM_CHECK=true
 export BASH_IT_THEME="powerline"
-export POWERLINE_PROMPT="user_info scm node cwd"
+export POWERLINE_PROMPT="user_info cwd"
 
 
 source "$BASH_IT"/bash_it.sh
