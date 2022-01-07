@@ -9,7 +9,6 @@ cd $EMACS_DIR
 ./configure --with-cairo \
             --with-modules \
             --without-compress-install \
-            --with-x-toolkit=no \
             --with-gnutls \
             --with-mailutils \
             --with-native-compilation \
@@ -28,7 +27,8 @@ cd $EMACS_DIR
             --with-threads \
             --with-native-image-api \
             --with-pdumper \
-            --with-x-toolkit=gtk2 \
+            --with-dbus \
+            ---with-pgtk
             CFLAGS="-O3 -mtune=native -march=native -fomit-frame-pointer" prefix=/usr/local
-make -j2 NATIVE_FULL_AOT=1
+make -j4 NATIVE_FULL_AOT=1
 sudo make install
