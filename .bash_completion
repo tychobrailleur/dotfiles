@@ -12,4 +12,3 @@ function _gulp_completions() {
 }
 
 complete -o default -F _gulp_completions gulp
-complete -F __start_kubectl k

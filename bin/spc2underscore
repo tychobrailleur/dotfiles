@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-
 # Change all the files with spaces to underscore.
 for f in *\ *; do mv "$f" "${f// /_}"; done

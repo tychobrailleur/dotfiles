@@ -8,13 +8,13 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # If problem with term display because of unicode char,
 # try setting TERM=term, rather than xterm-256color.
 #separator="💛💚"
-#separator="$"
+separator="$"
 #separator="🔰‏"
 # 🔰‏
 #separator="🐉"
 
-#PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e[0m\] '
-#PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
+PS1='\w$(__git_ps1 " \[\e[0;32m\](%s)\[\e[0;37m"\]) \[\e[1;33m\]${separator}\[\e[0m\] '
+PS1="\$(~/.rvm/bin/rvm-prompt u) $PS1"
 
 # Change colour of directories, blue is too dark
 LS_COLORS=$LS_COLORS:'di=0;35:'
@@ -23,8 +23,6 @@ export LS_OPTIONS='--color=auto'
 export EDITOR='emacs'
 
 PLATFORM=`uname`
-
-source <(kubectl completion bash)
 
 [[ -s  ~/.bash_aliases ]] && source ~/.bash_aliases
 [[ -s  ~/.bash_completion ]] && source ~/.bash_completion
@@ -36,6 +34,17 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
 fi
 if [[ "$PLATFORM" == "Linux" ]]; then
     [[ -s ~/.bash_linux ]] && source ~/.bash_linux
+fi
+
+## Find local config file, if needed
+testpg=kpsewhich
+if which "$testpg" 2> /dev/null; then
+  temp=$(kpsewhich -var-value TEXMFCONFIG)
+  if [ -e "$temp/web2c/texmf.cnf" ] ; then
+      export TEXMFCNF=$temp/web2c:
+  fi
+else
+  echo "kpsewhich not found"
 fi
 
 
@@ -84,4 +93,4 @@ export BASH_IT_THEME="powerline"
 export POWERLINE_PROMPT="user_info cwd"
 
 
-source "$BASH_IT"/bash_it.sh
+# source "$BASH_IT"/bash_it.sh
