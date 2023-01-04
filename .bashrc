@@ -76,21 +76,44 @@ fi
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 source "$HOME/.cargo/env"
 
-export BASH_IT="${HOME}/.bash_it"
+# export BASH_IT="${HOME}/.bash_it"
 
-# Don't check mail when opening terminal.
-unset MAILCHECK
+# # Don't check mail when opening terminal.
+# unset MAILCHECK
 
-# Change this to your console based IRC client of choice.
-export IRC_CLIENT='erc'
+# # Change this to your console based IRC client of choice.
+# export IRC_CLIENT='erc'
 
-# Set this to the command you use for todo.txt-cli
-export TODO="t"
+# # Set this to the command you use for todo.txt-cli
+# export TODO="t"
 
-# Set this to false to turn off version control status checking within the prompt for all themes
-export SCM_CHECK=true
-export BASH_IT_THEME="powerline"
-export POWERLINE_PROMPT="cwd scm"
+# # Set this to false to turn off version control status checking within the prompt for all themes
+# export SCM_CHECK=true
+# export BASH_IT_THEME="powerline"
+# export POWERLINE_PROMPT="cwd scm"
 
 
 # source "$BASH_IT"/bash_it.sh
+
+# vterm integration
+vterm_printf(){
+    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
+        # Tell tmux to pass the escape sequences through
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+
+vterm_cmd() {
+    local vterm_elisp
+    vterm_elisp=""
+    while [ $# -gt 0 ]; do
+        vterm_elisp="$vterm_elisp""$(printf '"%s" ' "$(printf "%s" "$1" | sed -e 's|\\|\\\\|g' -e 's|"|\\"|g')")"
+        shift
+    done
+    vterm_printf "51;E$vterm_elisp"
+}

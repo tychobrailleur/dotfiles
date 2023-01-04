@@ -1,7 +1,7 @@
 # -*- mode: sh -*-
 PATH=/usr/local/Cellar/ctags/5.8_1/bin/:${PATH}
-PATH=/Library/TeX/texbin:${PATH}
-PATH="/Applications/Racket v7.3/bin:${PATH}"
+PATH=/Users/sebastienlecallonnec/dev/texlive/2021/bin/universal-darwin:${PATH}
+#PATH="/Applications/Racket v7.3/bin:${PATH}"
 PATH="/usr/local/opt/texinfo/bin:${PATH}"
 PATH="/usr/local/texlive/2019/bin/x86_64-darwin:${PATH}"
 PATH="/Users/sebastienlecallonnec/.cargo/bin:${PATH}"
@@ -63,3 +63,4 @@ complete -F __start_kubectl k
 
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/Users/sebastienlecallonnec/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+PERL5LIB="${HOME}/perl5/lib/perl5"; export PERL5LIB
