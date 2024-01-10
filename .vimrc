@@ -44,6 +44,7 @@ function! SKEL_spec()
 	setf spec
 endfunction
 autocmd BufNewFile	*.spec	call SKEL_spec()
+set rtp+=/usr/local/opt/fzf
 " filetypes
 filetype plugin on
 filetype indent on
