@@ -1,2 +1,3 @@
-keycode  20 = minus underscore parenright degree U2013 U2014 bracketright notequal minus underscore backslash questiondown minus underscore backslash questiondown
-keycode  32 = o O o O oe OE oslash Oslash o O oslash Oslash o O oslash Oslash
+! Call with xmodmap ~/.Xmodmap
+keycode  20 = minus underscore parenright degree U2013 U2014 bracketright notequal minus underscore
+keycode  32 = o O oslash Oslash oe OE
