@@ -11,7 +11,7 @@ alias r="reset"
 alias h="cd"
 alias k="kubectl"
 alias apt-get="sudo apt-get"
-alias serve="python -m SimpleHTTPServer"
+alias serve="python -m http.server"
 alias rgrep="grep -HnR"
 alias mkdir='mkdir -p'
 
