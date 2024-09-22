@@ -63,5 +63,6 @@ make -j6 NATIVE_FULL_AOT=1
 sudo make install
 
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo codesign --force --deep --sign - nextstep/Emacs.app
     cp -R nextstep/Emacs.app /Applications
 fi
