@@ -21,4 +21,4 @@ export PATH="/usr/local/opt/m4/bin:$PATH"
 
 export SPICETIFY_INSTALL="/home/sebastien/spicetify-cli"
 export PATH="$SPICETIFY_INSTALL:$PATH"
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"

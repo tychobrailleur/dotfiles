@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+sudo pacman -Syu
+pamac update && pamac upgrade
+yay -Syu
+
+
+# Clear cache
+# pacman -Scc
+# yay -Scc
+# sudo paccache -r
+# sudo pacman -Rns $(pacman -Qtdq)
